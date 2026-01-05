@@ -1,4 +1,5 @@
 import React from 'react'
+import { JSX } from 'react/jsx-runtime'
 
 interface Props {
   companyName:  string,
@@ -8,7 +9,7 @@ interface Props {
   imageUrl:     string
 };
 
-const Card = ({companyName, ticker, price, description, imageUrl}: Props) => {
+const Card : React.FC<Props> = ({companyName, ticker, price, description, imageUrl}: Props) : JSX.Element => {
   return (
     <div className='card'>
         <img src={imageUrl} alt='Image' />
